@@ -5,27 +5,20 @@ import java.util.Queue;
 
 public class test01 {
     public static void main(String[] args) {
-        int[] a = {3,5,0,3,4};
-        Solution so = new Solution();
-        System.out.println(so.find132pattern(a));
+        String temp = "Let's take LeetCode contest";
+        System.out.println(new Solution().reverseWords(temp));
 
     }
 }
 class Solution {
-    public boolean find132pattern(int[] nums) {
-        Queue<Integer> queue = new PriorityQueue<>((a, b)->(b - a));
-        int n = nums.length;
-        int l = Integer.MIN_VALUE;
-        for(int i = n - 1; i >= 0; i--) {
-            if(nums[i] < l) {
-                return true;
-            }
-            while(!queue.isEmpty()&&nums[i] > queue.peek()) {
-                l = queue.poll();
-                break;
-            }
-            queue.offer(nums[i]);
+    public String reverseWords(String s) {
+        String[] strs = s.split(" ");
+        StringBuilder buffer = new StringBuilder();
+        for(int i = 0; i < strs.length; i++) {
+//            String temp = strs[i].reverse();
+//            buffer.append(temp);
+            buffer.append(" ");
         }
-        return false;
+        return buffer.toString().trim();
     }
 }
