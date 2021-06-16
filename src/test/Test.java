@@ -1,3 +1,5 @@
+package test;
+
 import jdk.swing.interop.SwingInterOpUtils;
 
 import javax.swing.tree.TreeNode;
@@ -200,6 +202,111 @@ public class Test {
 //                return num;
 //            }
 //        });
+//        List<Integer> res = new ArrayList();
+//        res.add(2);
+//        System.out.println(res.get(0));
+//        String t = "  hrtoher ";
+//        System.out.println(t.trim());
+//        System.out.println(t);
+//        System.out.println(t.substring(0,4));
+//        System.out.println(t.substring(4));
+//        System.out.println(Double.NaN);
+
+//        System.out.println(Math.random());
+//        String s = "\\\n";
+//        System.out.println(s);
+//        System.out.println((int)'\n');
+//        Integer[] nums = new Integer[10];
+//        for(int i = 0; i < 10; i++) {
+//            nums[i] = 10 - i;
+//        }
+//        Arrays.sort(nums, Comparator.comparingInt(a -> a));
+//        System.out.println(Arrays.toString(nums));
+//        System.out.println(Integer.valueOf("001"));
+//        List<Integer> res = Arrays.asList(nums);
+//        System.out.println(res.toString() + res.size());
+//        double xt2 = 0;
+//        int[] num = {1,2,2,3,5};
+//        if(xt2 > 0 && xt2 >= num[-2]) {
+//            System.out.println("false");
+//        }
+//        System.out.println(Math.pow(2,31));
+
+        //todo:测试优先队列
+        double[] res = new double[5];
+        Random random = new Random();
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)-> (int) (res[a] - res[b]));
+        for(int i = 0; i < 5; ++i) {
+            res[i] = random.nextInt(5);
+            pq.offer(i);
+        }
+        System.out.println(Arrays.toString(res));
+        while(!pq.isEmpty()) {
+            System.out.print(pq.poll() + "  ");
+        }
+
+        //todo:测试int[][] temp = new int[4][];   这种数组
+        int[][] temp = new int[4][];
+        for(int i = 0; i < temp.length; ++i) {
+            temp[i] = new int[random.nextInt(10) + 1];
+            for(int j = 0; j < temp[i].length; ++j) {
+                temp[i][j] = random.nextInt(10);
+            }
+        }
+
+        for(int i = 0; i < temp.length; ++i) {
+            for(int j = 0; j < temp[i].length; ++j) {
+                System.out.print(temp[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        Arrays.sort(temp,(a,b)->(a.length - b.length));
+        System.out.println("======================");
+
+        for(int i = 0; i < temp.length; ++i) {
+            for(int j = 0; j < temp[i].length; ++j) {
+                System.out.print(temp[i][j] + "  ");
+            }
+            System.out.println();
+        }
+
+        System.out.println(0x3f3f3f3f);
+        System.out.println("**************************");
+
+//        System.out.println(random.nextDouble());
+
+        double[][] re = new double[10][5];
+        for(int i = 0; i < 10; ++i) {
+            for(int j = 0; j < 5; ++j) {
+                re[i][j] = random.nextDouble() * 100;
+            }
+        }
+        System.out.println("排序前");
+        for(int i = 0; i < 10; ++i) {
+            for(int j = 0; j < 5; ++j) {
+                System.out.print(re[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        re[3][3] = 5;
+        re[4][3] = 5;
+        Arrays.sort(re, (a, b)-> Double.compare(a[3], b[3]));
+
+        System.out.println("排序后");
+        for(int i = 0; i < 10; ++i) {
+            for(int j = 0; j < 5; ++j) {
+                System.out.print(re[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        Double a = (double) 2;
+        System.out.println(a.compareTo((double)5));
+        double b = 3;
+
+
+
     }
 
 
