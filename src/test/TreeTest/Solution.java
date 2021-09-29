@@ -1,6 +1,4 @@
-package TreeTest;
-
-import java.util.*;
+package test.TreeTest;
 
 class Solution {
     public int longestMountain(int[] A) {

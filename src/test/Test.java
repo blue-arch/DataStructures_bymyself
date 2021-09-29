@@ -309,6 +309,22 @@ public class Test {
 
     }
 
+    @org.junit.Test
+    public void test0() {
+        PriorityQueue<Integer> p1 = new PriorityQueue<>();
+        PriorityQueue<Integer> p2 = new PriorityQueue<>();
+        p1.offer(89);
+//        p2.offer(p1.remove(0));
+        Random rand = new Random();
+        System.out.println(rand.nextInt(1));
+
+        System.out.println(Character.toLowerCase('A'));
+        System.out.println("dfAGERGgw".toLowerCase());
+
+        System.out.println(Integer.highestOneBit(16));
+    }
+
+
 
 
 

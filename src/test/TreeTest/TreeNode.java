@@ -1,4 +1,4 @@
-package TreeTest;
+package test.TreeTest;
 
 /**
  * @author 17208

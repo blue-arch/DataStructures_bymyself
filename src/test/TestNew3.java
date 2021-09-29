@@ -1,8 +1,10 @@
 package test;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+
+
+import lombok.extern.java.Log;
+
+import java.util.*;
 
 /**
  * @Author: Blue
@@ -35,8 +37,29 @@ public class TestNew3 {
 //        float a = 1.0f;
 //        float b = 2.0f;
 //        System.out.println(a / b);
-        Random random = new Random();
-        System.out.println(random.nextInt(5));
-        System.out.println();
+//        Random random = new Random();
+//        System.out.println(random.nextInt(5));
+//        System.out.println();
+        List<Integer> res = new ArrayList<>();
+        Integer[] te = {1,5,8,9,5};
+        List list = Arrays.asList(te);
+        System.out.println(list.size());
+        for(Object i : list) {
+            System.out.println(i + "-");
+        }
+        System.out.println(Double.compare(2,5));
+        Map<Integer, Integer> map = new HashMap();
+
+        List<String> stringArrayList = new ArrayList<String>();
+        List<Integer> integerArrayList = new ArrayList<Integer>();
+
+        Class classStringArrayList = stringArrayList.getClass();
+        Class classIntegerArrayList = integerArrayList.getClass();
+
+        if(classStringArrayList.equals(classIntegerArrayList)){
+            System.out.println("泛型测试"+"类型相同");
+        }
     }
 }
+
+

@@ -1,8 +1,5 @@
-package TreeTest;
+package test.TreeTest;
 
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author 17208

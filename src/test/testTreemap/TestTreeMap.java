@@ -1,6 +1,4 @@
-package test.treemap;
-
-import java.util.*;
+package test.testTreemap;
 
 /**
  * @Author: Blue

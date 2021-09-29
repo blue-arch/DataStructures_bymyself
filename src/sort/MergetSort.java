@@ -10,7 +10,7 @@ public class MergetSort {
         int[] arr = new int[80000];
         boolean flag = true;
         for(int i =0;i<80000;i++){
-            arr[i] = (int)(Math.random()*80000000);
+            arr[i] = (int)(Math.random()*800000000);
         }
         int[] temp = new int[arr.length];
         long timestamp = System.currentTimeMillis();
